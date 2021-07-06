@@ -1,7 +1,16 @@
 <!DOCTYPE HTML>
 <head>
 <style>
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+ font-size: 4vmin;
+}
+
 body {
+  margin:0;
   box-sizing: border-box;
   font-family: monospace;
   display: grid;
@@ -12,8 +21,8 @@ body {
 
 .base-timer {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 15em;
+  height: 15em;
 }
 
 /* scaleX(1) = CLOCKWISE, scaleX(-1) = ANTI-CLOCKWISE */
@@ -47,13 +56,13 @@ body {
 
 .base-timer__label {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 6em;
+  height: 6em;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
+  font-size: 2.5em;
 }
 
 .buttons {
@@ -65,13 +74,13 @@ body {
 
 
 .buttons button {
-  margin: 1rem;
+  margin: .7rem;
   border: none;
   background-color: #D7DEE9;
-  width: 100px;
-  height: 50px;
+  width: 4em;
+  height: 2em;
   border-radius: 5px;
-  padding: .3rem;
+  padding: .1rem;
   font-size: 1.1rem;
   color: #333B45;
 }
