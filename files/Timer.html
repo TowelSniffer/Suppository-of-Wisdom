@@ -100,7 +100,7 @@ body {
 </head>
 
 <body>
-  <div class="buttons">
+  <div class="buttons" id="hideShow">
   <button onclick="stop();myFunction(300);reset()">5分</button>
 <button onclick="stop();myFunction(600);reset()">10分</button>
 <button onclick="stop();myFunction(900);reset()">15分</button>
@@ -138,6 +138,10 @@ body {
   </div>
   <audio id="xyz" src="beep.mp3" preload="auto"></audio>
 <script>
+
+if (getUrlVars()["setTime"] < 5) {
+  document.getElementById("hideShow").style.display = "none";
+}
 
 function getUrlVars() {
     var vars = {};
@@ -205,7 +209,7 @@ function start(withReset = false) {
 function stop() {
   setDisabled(stopBtn);
   removeDisabled(startBtn);
-  startBtn.innerHTML = "Continue";
+  startBtn.innerHTML = "Resume";
   clearInterval(timerInterval);
 }
 
