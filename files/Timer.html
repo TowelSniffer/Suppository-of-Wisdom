@@ -210,7 +210,6 @@ function start(withReset = false) {
 function stop() {
   setDisabled(stopBtn);
   removeDisabled(startBtn);
-  startBtn.innerHTML = "Resume";
   clearInterval(timerInterval);
 }
 
